@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrow functions</title>
+</head>
+
+<body>
+    <h2>Arrow functions</h2>
+    Sum: <p id="first"></p>
+    Difference:<p id="second"></p>
+    Product: <p id="third"></p>
+    Division: <p id="fourth"></p>
+    Negation: <p id="fifth"></p>
+
+    <script>
+        let value1 = Number(prompt("Enter value 1 :")), value2 = Number(prompt("Enter value 2 :"));
+        const sum = (value1, value2) => {
+            return value1 + value2;
+        }
+
+        const diff = (value1, value2) => abs(value1 - value2);
+
+        const product = (value1, value2) => value1 * value2;
+
+        const divi = (value1, value2) => value1 / value2;
+
+        let value3 = Number(prompt("Enter value to negate :"))
+        const neg = value3 => ~value3;
+        document.getElementById("first").innerHTML = "Sum of two values :" + sum(value1, value2);
+        document.getElementById("second").innerHTML = "Difference of two values :" + diff(value1, value2);
+        document.getElementById("third").innerHTML = "Product of two values :" + product(value1, value2);
+        document.getElementById("fourth").innerHTML = "Division of two values :" + divi(value1, value2);
+        document.getElementById("fifth").innerHTML = "Negation of the value :" + neg(value3);
+    </script>
+</body>
+
+</html>
