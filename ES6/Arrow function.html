@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrow functions</title>
+</head>
+
+<body>
+    <h2>Arrow functions</h2>
+    <p id="val1"></p>
+    <p id="val2"></p>
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
+    <p id="fourth"></p>
+    
+    <script>
+        var value1 = Number(prompt("Enter value 1 :")), value2 = Number(prompt("Enter value 2 :"));
+        const sum = (value1, value2) => {
+            return value1 + value2;
+        }
+
+        const diff = (value1, value2) => Math.abs(value1 - value2);
+        
+        const product = (value1, value2) => value1 * value2;
+
+        const divi = (value1, value2) => value1 / value2;
+        
+        document.getElementById("val1").innerHTML="value 1= "+value1;
+        document.getElementById("val2").innerHTML="value 2= "+value2;
+       
+        document.getElementById("first").innerHTML = "Sum of two values : " + sum(value1, value2);
+        
+        document.getElementById("second").innerHTML = "Difference of two values : " + diff(value1, value2);
+        
+        document.getElementById("third").innerHTML = "Product of two values : " + product(value1, value2);
+       
+        document.getElementById("fourth").innerHTML = "Division of two values : " + divi(value1, value2);
+        
+    </script>
+</body>
+
+</html>

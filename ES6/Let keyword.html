@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Let Keyword</h2><br>
+    Let value1=10<br>
+    Value before redeclaring<p id="let1"></p>
+    Value after redeclaring<p id="let2"></p>
+    Let value2=5<br>
+    Value inside the block<p id="let3"></p>
+    Value outside the block<p id="let4"></p>//Let variable cannot be accessed outside the block   
+    <script>
+        let value1 = 10;
+        document.getElementById("let1").innerHTML = value1;
+        {
+            let value1 = 2;
+            document.getElementById("let2").innerHTML = value1;
+        }
+        {
+            let value2=5;
+            document.getElementById("let3").innerHTML = value2;
+        }
+        document.getElementById("let4").innerHTML = value2;
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Const Keyword</h2><br>
+    Let value1=10<br>
+    Value before reassigning<p id="first"></p>
+    Value after reassigning<p id="second"></p>//Const variable cannot be reassigned <br><br>
+    Let value2=5<br>
+    Value inside the block<p id="third"></p>
+    Value outside the block<p id="fourth"></p>//Const variable cannot be accessed outside the block   
+    <script>
+        const value1 = 10;
+        document.getElementById("first").innerHTML = value1;
+        value1 = 2;  //cannot be reassigned
+        document.getElementById("second").innerHTML = value1;
+    
+        {
+            const value2 = 5;
+            document.getElementById("third").innerHTML = value2;
+        }
+        document.getElementById("fourth").innerHTML = value2;  //cannot be accessed
+    </script>
+</body>
+</html> 
