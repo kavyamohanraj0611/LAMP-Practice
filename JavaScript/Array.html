@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h2>Array</h2>
+    <p id="display"></p>
+    <p id="pop"></p>
+    <p id="push"></p>
+    <p id="splice"></p>
+    <p id="slice"></p>
+    <script>
+    var helloFrom = function (personName) {
+        return "" + personName;
+    } 
+    var people = ['Alice', 'Bruce', 'Tom']; 
+    people.push('Bob');
+    people.push('Jerry');
+    people.pop();
+    for (var i=0; i < people.length; i++) 
+    {
+        var greeting = helloFrom(people[i]);
+        alert(greeting);
+    }
+    </script>
+</body>
+</html>
