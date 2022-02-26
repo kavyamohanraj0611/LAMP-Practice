@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>ES6 Sets</h2>
+<p id="first"></p>
+<p id="second"></p>
+<p id="third"></p>
+<p id="fourth"></p>
+<p id="fifth"></p>
+<script>
+const engines= new Set();
+engines.add("Opera");
+engines.add("Google");
+engines.add("Firefox");
+engines.add("Netscape");
+engines.add("Bing");
+let set1 = "";
+let set2 = "";
+engines.forEach (function(value) {
+  set1 += value + "<br>";
+})
+document.getElementById("first").innerHTML ="The Size of the SET is : "+ engines.size;
+document.getElementById("second").innerHTML ="The Values in SET is : <br>"+ set1;
+document.getElementById("third").innerHTML ="has() method checks if the value is contained in SET : "+engines.has("Bing");
+engines.delete("Opera");
+document.getElementById("fourth").innerHTML =" delete() method detetes the value: <br> The size of SET after deletion is : "+ engines.size
+engines.forEach(function(value, key, ownerSet) {
+   set2+=key + " " + value+"<br>";
+});
+document.getElementById("fifth").innerHTML ="In set key and value are the same : <br>"+set2;
+</script>
+</body>
+</html>
+
+

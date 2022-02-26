@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>ES6 Map</h2>
+<p id="first"></p>
+<p id="second"></p>
+<p id="third"></p>
+<p id="fourth"></p>
+<p id="fifth"></p>
+<script>
+let final="";
+const employee = new Map([
+  ["Alice","java"],
+  ["Bob", "c++"],
+  ["Jerry", "python"],
+  ["Tom","Bash"],
+  ["Anna","DBMS"]
+]);
+document.getElementById("first").innerHTML ="The size property returns the number of elements in a Map : "+ employee.size;
+document.getElementById("second").innerHTML ="The get() method gets the value of a key in a Map : "+ employee.get("Alice");
+document.getElementById("third").innerHTML ="The has() method returns true if a key exists in a Map : "+ employee .has("Jerry");
+document.getElementById("fourth").innerHTML ="The delete() method removes a Map element and displays true/false : "+ employee .delete("Bob");
+employee.forEach(function(value, key) {
+    final+=key + " " + value+"<br>";
+});
+document.getElementById("fifth").innerHTML ="The final map key and value is : <br>"+ final;
+</script>
+</body>
+</html>
