@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>ES6 Iterators</h2>
+<p id="first"></p>
+<script>
+const array = ['Anna','Alice', 'Bob', 'Jerry','Tom'];
+const iterators = array[Symbol.iterator]();
+document.write(JSON.stringify(iterators.next()));
+document.write("<br>");
+document.write(JSON.stringify(iterators.next()));
+document.write("<br>");
+document.write(JSON.stringify(iterators.next()));
+document.write("<br>");
+document.write(JSON.stringify(iterators.next()));
+</script>					
+</script>
+</body>
+</html>
