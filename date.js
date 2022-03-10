@@ -1,7 +1,7 @@
 var http = require('http');
-var currDate = require('./myfirstmodule');
+var currDate = require('./currDateTime');
 
 http.createServer(function (req, res) {
-  res.write("The current date and time : " + currDate.myDateTime());
+  res.write("The current date and time : " + currDate.dateTimefunc());
   res.end();
 }).listen(8080); 
