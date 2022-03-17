@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The button types</h1>
+
+<form >
+  <label >First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label >Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+
+  <button type="submit" value="Submit">Submit</button>
+  <button type="reset" value="Reset">Reset</button>
+  <button type="button" onclick="funct()">Greeting</button>
+  
+  <p id="demo"></p>
+</form>
+
+<script>
+function funct()
+{
+  document.getElementById("demo").innerHTML="Hello , Have a nice day";
+}
+</script>
+</body>
+</html>

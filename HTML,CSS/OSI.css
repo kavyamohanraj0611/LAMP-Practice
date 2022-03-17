@@ -1,0 +1,46 @@
+
+      *{
+        background-color: antiquewhite;
+      }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 15px;
+      }
+      th
+      {
+        background-color: lightslategray;
+      }
+      td
+      {
+        text-align: left;
+      }
+      tr:hover 
+      {
+          background-color:lightgreen;
+      }
+      tr:nth-child(even) 
+      {
+          background-color: lightgreen;
+      }
+      table,p,ol
+      {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 100px;
+        margin-left: 100px;
+      }
+        img
+        {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .link
+        {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+       
