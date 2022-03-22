@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h2>ES6 Generators</h2>
-<script>
-function * fun()
+function * funct()
 {
     yield 1;
     yield 2;
     yield 3;    
 }  
-var generator= fun();
-document.write(JSON.stringify(generator.next()));
-document.write("<br>");
-document.write(JSON.stringify(generator.next()));
-document.write("<br>");
-document.write(JSON.stringify(generator.next()));
-document.write("<br>");
-document.write(JSON.stringify(generator.next()));
-</script>					
-</script>
-</body>
-</html>
+var generator= funct();
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
+console.log(generator.next());
