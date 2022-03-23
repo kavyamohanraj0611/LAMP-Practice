@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Key Events</h2>
+<label>Control Key is Pressed or not : </label>
+<input type="text" onkeydown="isKeyPressed(event)">
+<p id="one"></p>
+
+<label>Location of the key.</label>
+<input type="text" onkeydown="keyLocation(event)">
+<p>
+    0 represents a Letters<br>
+    1 represents a left CTRL,ALT,SHIFT key <br>
+    2 represents a right CTRL,ALT,SHIFT key<br>
+    3 represents a key on the numeric keypad <br>
+</p>
+<p id="two"></p>
+
+<label> Unicode character code of the pressed key.</label>
+<input type="text" onkeypress="keyValue(event)">
+<p id="three"></p>
+
+
+
+<script>
+function isKeyPressed(event) {
+  var x = document.getElementById("one");
+  if (event.ctrlKey) {
+    x.innerHTML = "The Control key was pressed!";
+  } else {
+    x.innerHTML = "The Control key was NOT pressed!";
+  }
+}
+
+function keyLocation(event) {
+  var x = event.location;
+  document.getElementById("two").innerHTML = "Key location: " + x;
+}
+
+
+function keyValue(event) {
+  var x = event.charCode || event.keyCode;
+  document.getElementById("three").innerHTML = "The ASCII value is: " + x;
+}
+
+</script>
+
+
