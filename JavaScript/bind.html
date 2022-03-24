@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Function bind()</h1>
+
+<p id="demo"></p>
+
+<script>
+const person = {
+  firstName:"Nithiya",
+  lastName: "M",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Meena",
+  lastName: "M",
+}
+
+let fullName = person.fullName.bind(member);
+
+document.getElementById("demo").innerHTML = fullName();
+</script>
+
+</body>
+</html>
