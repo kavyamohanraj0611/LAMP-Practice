@@ -1,132 +1,87 @@
 /*JavaScript Section*/
 
-const form=document.getElementById('form');
-const firstName=document.getElementById('firstname');
-const lastName=document.getElementById('lastname');
-const email=document.getElementById('email');
-const phoneNumber=document.getElementById('phoneNumber');
-const password=document.getElementById('password');
-const password2=document.getElementById('password2');
+function formValidation(){
+    let firstName=document.getElementById("firstname").value;
+    let lastName=document.getElementById("lastname").value;
+    let email=document.getElementById("email").value;
+    let phoneNumber=document.getElementById("phoneNumber").value;
+    let genderMale=document.getElementById("male").checked;
+    let genderFemale=document.getElementById("female").checked;
+    let genderOthers=document.getElementById("others").checked;
+    let course=document.getElementById("course").value;
+    let setDate=document.getElementById("date1").value;
 
-form.addEventListener('submit',function (event){event.preventDefault();inputValidate();});
 
-function inputValidate()
-{
-    const firstNameValue=firstName.value.trim();
-    const lastNameValue=lastName.value.trim();
-    const emailValue=email.value.trim();
-    const phoneNumberValue=phoneNumber.value.trim();
-    const passwordValue=password.value;
-    const password2Value=password2.value;
+    const nameregex=/^[a-zA-Z]{3,15}$/;
+    const phoneRegex=/[6-9]\d{9}/;
+    const emailregex=/[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]{2,3}/;
+
+    if(firstName==""){
+        document.getElementById("fnameError").innerHTML="Please fill the firstName"
+    }
+    else if(!nameregex.test(firstName)){
+        document.getElementById("fnameError").innerHTML="Enter your name only with alphabets between 3 to 15 characters";
     
-    var inputCount=0;
-
-    const regexFirstName=/^[a-zA-Z]{2,15}$/;
-    const regexLastName=/^[a-zA-Z]{1,15}$/;
-    const regexEmail=/^([a-zA-Z0-9_\.\-]+)@([a-zA-Z]+)\.([a-zA-Z]{2,5})$/;
-    const regexPhoneNumber=/^[6-9]{1}[0-9]{9}$/;
-
-    if (firstNameValue==='')
-    {
-        setError(firstName,'First Name cannot be blank');
     }
-    else if (!regexFirstName.test(firstNameValue))
-    {
-        setError(firstName,'First Name can contain only letters and numbers');
-    }
-    else
-    {
-        setSuccess(firstName);
-        inputCount++;
+    else{
+        document.getElementById("fnameError").innerHTML="";
     }
 
-    if (lastNameValue==='')
-    {
-        setError(lastName,'Last Name cannot be blank');
+    if(lastName==""){
+        document.getElementById("lnameError").innerHTML="Please fill the lastName"
     }
-    else if (!regexLastName.test(lastNameValue))
-    {
-        setError(lastName,'Last Name can contain only letters and numbers');
+    else if(!nameregex.test(lastName)){
+        document.getElementById("lnameError").innerHTML="Enter your name only with alphabets between 3 to 15 characters";
+    
     }
-    else
-    {
-        setSuccess(lastName);
-        inputCount++;
+    else{
+        document.getElementById("lnameError").innerHTML="";
     }
 
-    if (emailValue==='')
-    {
-        setError(email,'Email cannot be blank');
+    if(phoneNumber==""){
+        document.getElementById("phoneError").innerHTML="Please fill the phone number"
     }
-    else if (!regexEmail.test(emailValue))
-    {
-        setError(email,'Enter valid email (eg-tonystark3000@gmail.com)');
+    else if(!phoneRegex.test(phoneNumber)){
+        document.getElementById("phoneError").innerHTML="The phone number should start with 6 or 7 or 8 or 9 and should contain only 10 digits";
+    
     }
-    else
-    {
-        setSuccess(email);
-        inputCount++;
+    else{
+        document.getElementById("phoneError").innerHTML="";
     }
 
-    if (phoneNumberValue==='')
-    {
-        setError(phoneNumber,'Phone Number cannot be blank');
+    if(email==""){
+        document.getElementById("emailError").innerHTML="Please fill the Email Id "
     }
-    else if (!regexPhoneNumber.test(phoneNumberValue))
-    {
-        setError(phoneNumber,'Enter valid Phone Number');
+    else if(!emailregex.test(email)){
+        document.getElementById("emailError").innerHTML="Enter valid email id"
     }
-    else
-    {
-        setSuccess(phoneNumber);
-        inputCount++;
+    else{
+        document.getElementById("emailError").innerHTML=""
     }
 
-    if (passwordValue==='')
-    {
-        setError(password,'Password cannot be blank');
+    if(genderMale==false&&genderFemale==false&&genderOthers==false){
+        document.getElementById("genderError").innerHTML="Please select one of the options"
     }
-    else if(passwordValue.length<8)
-    {
-        setError(password,'Password must be at least 8 characters');
-    }
-    else
-    {
-        setSuccess(password);
-        inputCount++;
+    else{
+        document.getElementById("genderError").innerHTML=""
     }
 
-    if (password2Value==='')
-    {
-        setError(password2,'Password cannot be blank');
+    if(course=="Choose_the_course"){
+        document.getElementById("courseError").innerHTML="Please select your course"
     }
-    else if(password2Value!==passwordValue)
-    {
-        setError(password2,'Passwords does not match');
-    }
-    else
-    {
-        setSuccess(password2);
-        inputCount++;
+    else{
+        document.getElementById("courseError").innerHTML="";
     }
 
-    if(inputCount==6)
-    {
-        alert("Successfully Registered !!!");
+    if(setDate===""){
+        document.getElementById("dateError").innerHTML="Please select the date"
     }
+    else{
+        document.getElementById("dateError").innerHTML=""
+    }
+    return false;
 }
-
-function setError(element,message)
-{
-    const inputElement=element.parentElement;
-    const errorDisplay=inputElement.querySelector('small');
-    errorDisplay.innerText=message;
-    inputElement.className='elements error';
-    small.innerText=message;
-}
-
-function setSuccess(element)
-{
-    const inputElement=element.parentElement;
-    inputElement.className='elements success';
-}
+document.getElementsByClassName('form-container')[0].addEventListener('submit' , event => {
+    event.preventDefault()
+    formValidation()
+});
