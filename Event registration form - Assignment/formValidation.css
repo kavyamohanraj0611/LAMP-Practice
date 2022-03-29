@@ -1,100 +1,134 @@
 /*CSS Section*/
-    *
-    {
-        box-sizing: border-box;
-    }
+*
+{
+    box-sizing: border-box;
+}
 
-    body
-    {
-        background-color:lightgreen;
-        font-family: sans-serif;
-        width: 300px;
-        margin:10vh;
-        padding: 10px 340px;
-        border-radius: 4px;
-        font-size: 15px;
-    }
+body
+{
+    background-color:lightgreen;
+    font-family: sans-serif;
+    width: 100%;
+    margin:50px;
+    padding: 10px 500px;
+    border-radius: 4px;
+    font-size: 15px;
+}
 
-    .form-container
-    {
-        background-color:lavender ;
-        border:solid 1px;
-        width: 700px;
-        padding: auto;
-    }
+.form-container
+{
+    background-color:lavender ;
+    border:solid 1px;
+    width: 700px;
+    padding: auto;
+}
 
-    .header h1
-    {
-        background-color:lightskyblue;
-        padding: 20px 150px ;
-    }
+h1
+{
+    background-color:lightskyblue;
+    padding: 20px 10px ;
+    text-align:center;
+}
+
+h2
+{
+    padding: 10px ;
+    margin-bottom:0px;
+    text-align:center;
+}
+
+.form 
+{
+    padding: 30px 50px;
+}
+
+.elements
+{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+label
+{
     
-    .header h2
-    {
-        padding: 10px 250px ;
-    }
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-top:40px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
 
-    .form 
-    {
-        padding: 30px 50px;
-    }
-
-    .elements
-    {
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        position: relative;
-    }
-
-    .elements label
-    {
-        
-        font-size: 20px;
-        margin-bottom: 10px;
-        padding-bottom: 5px;
-        display: inline-block;
-    }
-
-    .elements input
-    {
-        border:solid 2px #fff;
-        border-radius: 4px;
-        padding: 10px;
-        width: 100%;
-        font-size: 15px; 
-    }
-
-    .elements small
-    {
-        position:absolute;
-        bottom: 0;
-        left: 0;
-        visibility: hidden;
-    }
-    .form button
-    {
-        background-color:rgb(97, 97, 226) ;
-        border:solid 2px rgb(97, 97, 226);
-        color: white;
-        font-size: 17px;
-        padding: 10px;
-        margin-top:10px ;
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    .elements.success input
-    {
-        border-color: lime;
-    }
-
-    .elements.error input
-    {
-        border-color: red;
-    }
+label[for=male]
+{
     
-    .elements.error small
-    {
-        visibility: visible;
-        color: red;
-    }
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-left:10px;
+    padding-top: 10px;
+    padding-right:30px;
+}
+label[for=female]
+{
+    
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-right:30px;
+}
+label[for=others]
+{
+    
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-left:10px;
+    padding-top: 10px;
+}
+label[for=gender]
+{
+    
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-top: 8px;
+    padding-right:40px;
+}
+input
+{
+    border:solid 4px #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px; 
+}
+
+select
+{
+    border:solid 4px #fff;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+span
+{
+    padding: 6px 0 4px;
+    position:absolute;
+    display: block;
+    color: red;
+}
+button
+{
+    background-color:rgb(97, 97, 226) ;
+    border:solid 2px rgb(97, 97, 226);
+    color: white;
+    font-size: 17px;
+    margin-top:60px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+[type=radio] {
+    width: 16px;
+}
