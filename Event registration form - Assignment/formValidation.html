@@ -3,7 +3,6 @@
 <head>
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="./formValidation.css">   <!--Including CSS Section-->
-    <script src="./formValidation.js"></script>                           <!--Including JavaScript Section-->
 </head>
 <body>
     <!--HTML Section-->
@@ -17,7 +16,6 @@
                 <input type="text" id="firstname" placeholder="Enter your First Name" >
                 <span id="fnameError"></span>
                 
-        
                 <label><b>Last Name</b></label>
                 <input type="text" id="lastname" placeholder="Enter your Last Name">
                 <span id="lnameError"></span>
@@ -27,30 +25,28 @@
                 <span id="emailError"></span>
 
                 <label name="phone"><b>Phone No</b></label>
-                <input type="tel" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber"  ><br>
+                <input type="tel" placeholder="Enter phone number" id="phoneNumber"  ><br>
                 <span id="phoneError"></span>
 
                 <table>
-                <tbody>
                 <tr>
-                <td><label for="gender" name="gender" id="gender"><b>Gender</b></label> </td>
+                <td><label for="gender" id="gender"><b>Gender</b></label> </td>
           
-                <td><input type="radio" name="gender" id="male" value="male" ></td>
+                <td><input type="radio" id="male" value="male" ></td>
                 <td><label for="male">Male</label></td>
           
-                <td><input type="radio" name="gender" id="female" value="female"></td>
+                <td><input type="radio" id="female" value="female"></td>
                 <td><label for="female">Female</label></td><br>
 
-                <td><input type="radio" name="gender" id="others" value="others"></td>
+                <td><input type="radio"  id="others" value="others"></td>
                 <td><label for="others">Others</label></td><br>
                 </tr>
-                </tbody>
                 </table>
                 <span id="genderError"></span>
          
-                <label for="course" name="course" ><b>Course</b></label>
-                <select name="course" id="course" >
-                    <option hidden>Choose_the_course</option>
+                <label for="course" ><b>Course</b></label>
+                <select  id="course" >
+                    <option hidden>Choose the course</option>
                     <option>HTML</option>
                     <option>CSS</option>
                     <option>JavaScript</option>
@@ -59,14 +55,14 @@
                 </select>
                 <span id="courseError"></span>
                 
-            
                 <label for="date1" name="date1"><b>Date</b></label>
-                <input type="date" id="date1" name="date1" ><br>
+                <input type="date" id="date1" ><br>
                 <span id="dateError"></span>
             
-                <button type="submit" id="submit" name="submit" >Submit</button>
+                <button type="submit" id="submit" >Submit</button>
         
         </form>
     </div>
 </body>
+<script src="./formValidation.js"></script> 
 </html>
