@@ -16,8 +16,8 @@ for (const value of ['A','B','C']) {
     console.log(value);
 }
 
-function two() {
+function funct() {
     console.log(2);
 }
 
-two();
+funct();
