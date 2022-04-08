@@ -8,6 +8,7 @@ const fun = () => {
   new Promise((resolve, reject) =>
     resolve('\"Executes after wel and before exit\"')
   ).then(resolve => console.log(resolve))
+  console.log(state)
   wel()
 }
 fun()
