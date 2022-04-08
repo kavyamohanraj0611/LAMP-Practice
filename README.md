@@ -1,1 +1,1 @@
-# myCodes
+# LAMP Practice
