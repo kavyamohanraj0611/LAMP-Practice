@@ -5,7 +5,7 @@ const fun = () => {
   console.log('Aspire Systems')
   setTimeout(exit, 2000)
   setTimeout(details,1000)
-  new Promise((resolve, reject) =>
+  const state=new Promise((resolve, reject) =>
     resolve('\"Executes after wel and before exit\"')
   ).then(resolve => console.log(resolve))
   console.log(state)
