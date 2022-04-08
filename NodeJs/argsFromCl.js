@@ -1,10 +1,6 @@
-let arg = process.argv
-arg[2]=Number(arg[2])
-arg[3]=Number(arg[3])
+const args = require('minimist')(process.argv.slice(2));
 
-let result = product(arg[2], arg[3])
-console.log("Product of given numbers is ", result)
+console.log("The arguments are ",args);
+console.log(args.i);
+console.log(args.j);
 
-function product(arg1, arg2) {
-	return arg1*arg2
-}
