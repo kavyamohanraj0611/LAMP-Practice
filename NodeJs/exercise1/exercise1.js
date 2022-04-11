@@ -19,25 +19,3 @@ fs.readFile('./exercise1.json',  function (err, data) {
 });
 
 
-
-
-
-
-
-
-
-
-
-// let http=require("http")
-// let fs=require("fs")
-// http.createServer(function (request, respond) {
-//     fs.readFile('./exercise1.json', function(err, data) {
-       
-//       respond.write(data.toString());
-//       return respond.end();
-//     });
-
-//     fs.readFile('./demo2.json', function(err, data) {
-//         console.log(data);
-//      });
-// }).listen(7070);
