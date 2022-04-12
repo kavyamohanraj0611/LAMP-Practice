@@ -37,3 +37,19 @@ d.run(()=>{
 });
 
 d.on("error",(err)=>console.log("The Error was caught... using domain"))
+
+//using promises
+const promise = new Promise(function (resolve, reject) {
+    reject(new Error('Something was wrong...'));
+});
+
+promise.then(() => {
+        console.log("hi");
+    })
+    .then(() => {
+        console.log('hello'); 
+    })
+    .catch(err => {
+        console.log(err.message); 
+    })
+    
