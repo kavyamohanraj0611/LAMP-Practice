@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee registeration</title>
+    <!--<link rel="stylesheet" href="./employeeForm.css">!-->
+</head>
+
+<body>
+    <div class="form">
+    <h1>Employee Registration Form</h1>
+    <form class="employeeForm">
+
+        <div id="basic" class="details">
+            <label><b>Email Id<sup> *</sup></b></label>
+            <input type="text" id="email" name="email" placeholder="Enter your email id"><br>
+
+            <label><b>Password<sup> *</sup></b></label>
+            <input type="password" id="password" placeholder="Enter your password"><br>
+
+            <label><b>Confirm Password<sup> *</sup></b></label>
+            <input type="password" id="confirmpass" placeholder="Enter your password again"><br>
+
+            <label><b>FirstName<sup> *</sup></b></label>
+            <input type="text" id="firstname" placeholder="Enter your Firstname"><br>
+
+            <label><b>LastName</b></label>
+            <input type="text" id="lastname" placeholder="Enter your Lastname"><br>
+        </div>
+
+        <div id="others" class="details">
+            <label><b>DOB<sup> *</sup></b></label>
+            <input type="text" id="dob" placeholder="Enter your date of birth in dd/mm/yyyy format"><br>
+
+            <label for="gender" id="gender"><b>Gender<sup> *</sup></b></label><br>
+            <input type="radio" id="male" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" value="female">
+            <label for="female">Female</label><br>
+            <input type="radio" id="others" value="others">
+            <label for="others">Others</label><br>
+
+            <label><b>Address</b></label><br>
+            <textarea id="address" rows="4" cols="15" name="address"
+                placeholder="Enter your address here"></textarea><br>
+
+            <label><b>State<sup> *</sup></b></label>
+            <select id="state">
+                <option value="Choose your state" hidden>Choose your state</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select><br>
+
+            <label><b>Mobile Number<sup> *</sup></b></label>
+            <input type="number" id="mobile" placeholder="Enter your Mobile number"><br>
+        </div>
+
+        <div id="work" class="details">
+            <label><b>Occupation</b></label>
+            <select>
+                <option value="Developer">Developer</option>
+                <option value="Testing">Testing</option>
+                <option value="Sales">Sales</option>
+                <option value="Banking">Banking</option>
+            </select><br>
+
+            <label><b>Years of Experience</b></label>
+            <input type="number" id="experience" placeholder="Enter your overall years of experience"><br>
+        </div>
+
+        <div id="education" class="details">
+            <label><b>Education qualification<sup> *</sup></b></label>
+            <select name="graduation"> 
+                <option>Select a option</option>  
+                <option value="SSLC">SSLC</option>
+                <option value="HSC">HSC</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+              </select>
+            <input type="text" name="graduation" id="graduation" style='display:none;'><br>
+            
+            <label hidden><b>Year of passing<sup> *</sup></b></label>
+            <input type="text" id="year" placeholder="Enter the year of passing" hidden><br>
+        </div>
+
+        <div id="team" class="details">
+            <label><b>Department/Practice<sup> *</sup></b></label>
+            <select>
+                <option value="Choose your practice" hidden>Choose your practice</option>
+                <option value="Lamp">LAMP</option>
+                <option value="Dotnet">DOTNET</option>
+                <option value="BFS">BFS</option>
+                <option value="IAS">IAS</option>
+                <option value="Oracle">Oracle</option>
+            </select><br>
+        </div>
+
+        <div id="terms" class="details">
+            <input type="checkbox" id="conditions" value="Agree with Terms and conditions"><small>Agree with Terms and conditions<sup> *</sup></small> 
+        </div>
+    </form>
+</div>
+</body>
+
+</html>

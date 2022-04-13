@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+body
+{
+    background-color:lightyellow;
+    font-family: sans-serif;
+    width: 100%;
+    margin:50px;
+    padding: 10px 500px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+    width: 500px;
+}
+
+.form 
+{
+    padding: 30px 50px;
+}
+
+.employeeForm
+{
+     background-color:lavender ;
+     border:solid 1px;
+     width: 700px;
+     padding: auto;
+}
+
+.details
+{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+label
+{
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-top:40px;
+    padding-bottom: 10px;
+    padding-left:20px;
+    display: inline-block;
+}
+
+input
+{
+    border:solid 4px #fff;
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 20px;
+    width: 100%;
+    font-size: 15px; 
+}
+
+select
+{
+    border:solid 4px #fff;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+}
