@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee registeration</title>
+    <link rel="stylesheet" href="./employeeForm.css">
+</head>
+
+<body>
+    <span class="tab">
+        <button id="step1" class="tablinks" onclick="nextTab(event, 'basic')">Step 1</button>
+        <button id="step2" class="tablinks" onclick="nextTab(event, 'other')">Step 2</button>
+        <button id="step3" class="tablinks" onclick="nextTab(event, 'work')">Step 3</button>
+        <button id="step4" class="tablinks" onclick="nextTab(event, 'education')">Step 4</button>
+        <button id="step5" class="tablinks" onclick="nextTab(event, 'team')">Step 5</button>
+    </span>
+    <div class="form">
+    <h1>Employee Registration Form</h1>
+    <h2>Fill your details</h2>
+    <form class="employeeForm" onsubmit="Page.html" >
+        <div id="basic" class="details aboveTab step-1 active">
+            <h3>BASIC DETAILS</h3><br>
+            <label><b>Email Id<sup> *</sup></b></label>
+            <input type="text" id="email" name="email" placeholder="Enter your email id"><br>
+            <span id="id1"></span><br>
+
+            <label><b>Password<sup> *</sup></b></label>
+            <input type="password" id="password" placeholder="Enter your password"><br>
+            <span id="id2"></span><br>
+
+            <label><b>Confirm Password<sup> *</sup></b></label>
+            <input type="password" id="confirmpass" placeholder="Enter your password again"><br>
+            <span id="id3"></span><br>
+
+            <label><b>FirstName<sup> *</sup></b></label>
+            <input type="text" id="firstname" placeholder="Enter your Firstname"><br>
+            <span id="id4"></span><br>
+
+            <label><b>LastName</b></label>
+            <input type="text" id="lastname" placeholder="Enter your Lastname"><br>
+            <span id="id5"></span><br>
+
+            <div id="first" class="belowtab nextBtn">
+                <button type="button" class="btn-nxt">Next</button>
+            </div>
+        </div>
+
+        <div id="other" class="details aboveTab step-2">
+            <h3>OTHER DETAILS</h3><br>
+            <label><b>DOB<sup> *</sup></b></label>
+            <input type="text" id="dob" placeholder="Enter your date of birth in dd/mm/yyyy format"><br>
+            <span id="id6"></span>
+
+            <label for="gender" id="gender"><b>Gender<sup> *</sup></b></label>
+            <input type="radio" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="others" value="others">
+            <label for="others">Others</label><br>
+            <span id="id7"></span>
+
+            <label><b>Address</b></label><br>
+            <textarea id="address" rows="4" cols="15" name="address" placeholder="Enter your address here"></textarea><br>
+
+            <label><b>State<sup> *</sup></b></label>
+            <select id="state">
+                <option value="Choose your state" hidden>Choose your state</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+            </select><br>
+            <span id="id8"></span>
+
+            <label><b>Mobile Number<sup> *</sup></b></label>
+            <input type="number" id="mobile" placeholder="Enter your Mobile number"><br>
+            <span id="id9"></span>
+
+            <div id="second" class="belowtab">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-nxt">Next</button>
+            </div>
+        </div>
+        
+
+        <div id="work" class="details aboveTab step-3">
+            <h3>WORK DETAILS</h3><br>
+            <label><b>Occupation</b></label>
+            <select id="occupation">
+                <option value="Choose your occupation" hidden>Choose your occupation</option>
+                <option value="Developer">Developer</option>
+                <option value="Testing">Testing</option>
+                <option value="Sales">Sales</option>
+                <option value="Banking">Banking</option>
+                <option value="Student">Student</option>
+            </select><br>
+
+            <label><b>Years of Experience</b></label>
+            <input type="number" id="experience" placeholder="Enter your overall years of experience"><br>
+            <div id="third" class="belowtab">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-nxt">Next</button>
+            </div>
+        </div>
+
+        <div id="education" class="details aboveTab step-4">
+            <h3>EDUCATION DETAILS</h3><br>
+            <label><b>Education qualification<sup> *</sup></b></label>
+            <select name="graduation" id="education"> 
+                <option value="Select a option" hidden>Select a option</option>  
+                <option value="SSLC">SSLC</option>
+                <option value="HSC">HSC</option>
+                <option value="UG">UG</option>
+                <option value="PG">PG</option>
+              </select>
+            <input type="text" name="graduation" id="graduation" style='display:none;'><br>
+            <span id="id10"></span>
+
+            <label><b>Year of passing<sup> *</sup></b></label>
+            <input type="text" id="year" placeholder="Enter the year of passing"><br>
+            <span id="id11"></span>
+
+            <div id="fourth" class="belowtab">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-nxt">Next</button>
+            </div>
+        </div>
+
+        <div id="team" class="details aboveTab step-5">
+            <h3>TEAM DETAILS</h3><br>
+            <label><b>Department/Practice<sup> *</sup></b></label>
+            <select id="department">
+                <option value="Choose your practice" hidden>Choose your practice</option>
+                <option value="Lamp">LAMP</option>
+                <option value="Dotnet">DOTNET</option>
+                <option value="BFS">BFS</option>
+                <option value="IAS">IAS</option>
+                <option value="Oracle">Oracle</option>
+            </select><br>
+            <span id="id12"></span>
+            <div id="terms" >
+                <input type="checkbox" id="conditions" name="conditions" value="Agree with Terms and conditions"><small>Agree with Terms and conditions<sup> *</sup></small>
+                <span id="id13"></span>
+             </div>
+
+            <div id="fifth" class="belowtab">
+                <button type="button" class="btn-prev">Previous</button>
+            </div>
+            <button type="submit" id="step6" class="btn-submit"><b>Submit</b></button>
+            
+        </div>        
+    </form>
+</div>
+</body>
+<script src="./employeeForm.js"></script>
+</html>
