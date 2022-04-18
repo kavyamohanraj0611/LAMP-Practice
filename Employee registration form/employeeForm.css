@@ -24,6 +24,11 @@ body {
     padding: 0px 380px;
     border-radius: 4px;
     font-size: 15px;
+
+    background-image: url('./back.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
 }
 
 textarea {
@@ -32,6 +37,7 @@ textarea {
     padding: 10px;
     margin-left: 50px;
     margin-top: 0px;
+    border: solid 1.5px black;
 }
 
 .form {
@@ -42,7 +48,16 @@ textarea {
     padding: 10px;
     margin: 30px 150px;
     display: inline-block;
+
+    background-image: url('./back4.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+    
 }
+img {
+    opacity: 0.5;
+  }
 
 .details {
     position: relative;
@@ -71,8 +86,9 @@ label {
 }
 
 input {
-    border: solid 4px #fff;
+    border: solid 1.5px black;
     border-radius: 4px;
+    background-color: rgb(224, 223, 223);
     padding: 10px 0px;
     width: 50%;
     font-size: 15px;
@@ -80,8 +96,8 @@ input {
 }
 
 select {
-    border: solid 4px #fff;
-    background-color: #fff;
+    border: solid 1.5px black;
+    background-color: rgb(224, 223, 223);
     border-radius: 4px;
     padding: 10px;
     width: 50%;
@@ -97,6 +113,8 @@ select {
 .btn-nxt {
     margin-top: 10px;
     padding: 5px 15px;
+    margin-right: 10px;
+    background-color: aliceblue;
 }
 
 #terms {
