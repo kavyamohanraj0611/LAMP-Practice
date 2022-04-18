@@ -126,7 +126,7 @@ function dateValidate() {
         onError(dob, "Enter your date of birth.", dateId);
     }
     else if (!dateValidation(dob.value.trim())) {
-        onError(dob, "Age should be greater than 20.", dateId);
+        onError(dob, "Enter valid date and age should be greater than 20.", dateId);
     }
     else {
         onSuccess(dob, dateId);
@@ -293,7 +293,17 @@ function nameValidation(name) {
 
 function dateValidation(dob) {
     var age = Math.floor((new Date().getFullYear() - new Date(dob).getFullYear()));
+    var month=new Date(dob).getMonth();
+    var date=new Date(dob).getDate();
     if (age < 21) {
+        return false;
+    }
+    else if(isNaN(month))
+    {
+        return false;
+    }
+    else if(isNaN(date))
+    {
         return false;
     }
     else {
