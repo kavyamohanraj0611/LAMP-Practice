@@ -1,73 +1,133 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-h1{
+h1,
+h2 {
     text-align: center;
 }
 
-body
-{
-    background-color:lightyellow;
+h2 {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #000;
+}
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+body {
+    background-color: lightgoldenrodyellow;
     font-family: sans-serif;
     width: 100%;
-    margin:50px;
-    padding: 10px 500px;
+    padding: 0px 380px;
     border-radius: 4px;
     font-size: 15px;
 }
 
 textarea {
     resize: none;
-    width: 500px;
+    width: 50%;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 0px;
 }
 
-.form 
-{
-    padding: 30px 50px;
-}
-
-.employeeForm
-{
-     background-color:lavender ;
-     border:solid 1px;
-     width: 700px;
-     padding: auto;
-}
-
-.details
-{
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    position: relative;
-}
-
-label
-{
-    font-size: 20px;
-    margin-bottom: 5px;
-    padding-top:40px;
-    padding-bottom: 10px;
-    padding-left:20px;
+.form {
+    margin-top: 20px;
+    background-color: lavender;
+    border: solid 1px;
+    width: 700px;
+    padding: 10px;
+    margin: 30px 150px;
     display: inline-block;
 }
 
-input
-{
-    border:solid 4px #fff;
-    border-radius: 4px;
-    padding: 10px;
-    padding-left: 20px;
-    width: 100%;
-    font-size: 15px; 
+.details {
+    position: relative;
+    display: none;
 }
 
-select
-{
-    border:solid 4px #fff;
+.details.active {
+    display: block;
+}
+
+label {
+    font-size: 20px;
+    padding: 30px 40px;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+[type=radio] {
+    width: 16px;
+    padding-left: 200px;
+}
+
+[type=checkbox] {
+    width: 16px;
+    margin: 0px
+}
+
+input {
+    border: solid 4px #fff;
+    border-radius: 4px;
+    padding: 10px 0px;
+    width: 50%;
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+select {
+    border: solid 4px #fff;
     background-color: #fff;
     border-radius: 4px;
     padding: 10px;
-    width: 100%;
+    width: 50%;
     font-size: 15px;
+}
+
+.details {
+    display: none;
+    padding: 5px 10px;
+}
+
+.btn-prev,
+.btn-nxt {
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+#terms {
+
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+small {
+    padding-bottom: 40px;
+    padding-left: 100px;
+    position: relative;
+    float: left;
+}
+
+#step6 {
+    float: right;
+    margin-top: 60px;
+    margin-left: 450px;
+    margin-bottom: 0px;
+    padding: 5px 15px;
+    background-color: lightskyblue;
+
+}
+
+.step-active {
+    display: block;
+}
+
+span {
+    color: red;
+    font-size: small;
+    display: inline-block;
 }
