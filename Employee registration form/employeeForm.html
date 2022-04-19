@@ -11,26 +11,35 @@
         <h1>Employee Registration Form</h1>
         <h2>Fill your details</h2>
         <form class="employeeForm" action="./page.html" onsubmit="return validateForm()">
+            <br>
+            <div class="tab">
+                <button type="button" class="btn-tab" id="tab1" onclick=jumpTab(1)>Basic</button>
+                <button type="button" class="btn-tab" id="tab2" onclick=jumpTab(2)>Other</button>
+                <button type="button" class="btn-tab" id="tab3" onclick=jumpTab(3)>Work</button>
+                <button type="button" class="btn-tab" id="tab4" onclick=jumpTab(4)>Education</button>
+                <button type="button" class="btn-tab" id="tab5" onclick=jumpTab(5)>Team</button>
+            </div>
+            <br>
             <div class="details step-1 active">
                 <h3>BASIC DETAILS</h3><br>
                 <label><b>Email Id<sup> *</sup></b></label>
-                <input type="text" id="email" name="email" placeholder="Enter your email id"><br>
+                <input type="text" id="email" name="email" placeholder=" Enter your email id"><br>
                 <span id="id1"></span><br>
 
                 <label><b>Password<sup> *</sup></b></label>
-                <input type="password" id="password" placeholder="Enter your password"><br>
+                <input type="password" id="password" placeholder=" Enter your password"><br>
                 <span id="id2"></span><br>
 
                 <label><b>Confirm Password<sup> *</sup></b></label>
-                <input type="password" id="confirmpass" placeholder="Enter your password again"><br>
+                <input type="password" id="confirmpass" placeholder=" Enter your password again"><br>
                 <span id="id3"></span><br>
 
                 <label><b>FirstName<sup> *</sup></b></label>
-                <input type="text" id="firstname" placeholder="Enter your Firstname"><br>
+                <input type="text" id="firstname" placeholder=" Enter your Firstname"><br>
                 <span id="id4"></span><br>
 
                 <label><b>LastName</b></label>
-                <input type="text" id="lastname" placeholder="Enter your Lastname"><br>
+                <input type="text" id="lastname" placeholder=" Enter your Lastname"><br>
                 <span id="id5"></span><br>
 
                 <div id="first" class="belowtab nextBtn">
@@ -38,23 +47,26 @@
                 </div>
             </div>
 
-            <div class="details step-2">
+            <div class="details step-2 ">
                 <h3>OTHER DETAILS</h3><br>
                 <label><b>DOB<sup> *</sup></b></label>
-                <input type="text" id="dob" placeholder="Enter your date of birth in dd/mm/yyyy format"><br>
-                <span id="id6"></span><br>
-
-                <label for="gender" id="gender"><b>Gender<sup> *</sup></b></label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="others" name="gender" value="others">
-                <label for="others">Others</label><br>
+                <input type="date" id="dob" placeholder=" Enter your date of birth"><br>
+                <span id="id6"></span>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="gender"><b>Gender<sup> *</sup></b></label> </td>
+                            <td><input type="radio" name="gender" id="male" value="male">Male</td>
+                            <td><input type="radio" name="gender" id="female" value="female">Female</td>
+                            <td><input type="radio" name="gender" id="others" value="others">Others</td>
+                        </tr>
+                        <br>
+                    </tbody>
+                </table>
                 <span id="id7"></span><br>
 
-                <label><b>Address</b></label><br>
-                <textarea type="text" id="address" name="address" placeholder="Enter your address here"></textarea><br>
+                <label><b>Address</b></label>
+                <textarea type="text" id="address" name="address" placeholder=" Enter your address here"></textarea><br>
 
                 <label><b>State<sup> *</sup></b></label>
                 <select id="state">
@@ -92,8 +104,8 @@
                 </select><br>
                 <span id="id8"></span><br>
 
-                <label><b>Mobile Number<sup> *</sup></b></label>
-                <input type="tel" id="mobile" placeholder="Enter your Mobile number"><br>
+                <label><b>Phone Number<sup> *</sup></b></label>
+                <input type="tel" id="mobile" placeholder=" Enter your Phone number"><br>
                 <span id="id9"></span><br>
 
                 <div id="second" class="belowtab">
@@ -116,7 +128,7 @@
                 </select><br>
 
                 <label><b>Years of Experience</b></label>
-                <input type="number" id="experience" placeholder="Enter your overall years of experience"><br>
+                <input type="number" id="experience" placeholder=" Enter your overall years of experience"><br>
                 <div id="third" class="belowtab">
                     <button type="button" class="btn-prev">Previous</button>
                     <button type="button" class="btn-nxt">Next</button>
@@ -136,8 +148,8 @@
                 <span id="id10"></span><br>
 
                 <label><b>Year of passing<sup> *</sup></b></label>
-                <input type="text" id="year" placeholder="Enter the year of passing"><br>
-                <span id="id11"></span><br>
+                <input type="text" id="year" placeholder=" Enter the year of passing"><br>
+                <span id="id11"></span><br><br>
 
                 <div class="belowtab">
                     <button type="button" class="btn-prev">Previous</button>
@@ -147,7 +159,7 @@
 
             <div class="details step-5 ">
                 <h3>TEAM DETAILS</h3><br>
-                <label><b>Department/Practice<sup> *</sup></b></label>
+                <label><b>Department<sup> *</sup></b></label>
                 <select id="department">
                     <option value="">Choose your practice</option>
                     <option value="Lamp">LAMP</option>
@@ -158,12 +170,12 @@
                 </select><br>
                 <span id="id12"></span><br><br>
 
-                <input type="checkbox" id="conditions" value="check"><span style="color:black">Agree to the terms and
-                    conditions<sup> *</sup></span><br><br>
+                <input type="checkbox" id="conditions" value="check" style="color:black">Agree to the terms and
+                conditions<sup> *</sup><br><br>
                 <span id="id13"></span><br>
 
                 <button type="button" class="btn-prev">Previous</button>
-                <span><button type="submit" id="step6" class="btn-submit"><b>Submit</b></button></span>
+                <button type="submit" id="step6" class="btn-submit"><b>Submit</b></button>
 
             </div>
         </form>
