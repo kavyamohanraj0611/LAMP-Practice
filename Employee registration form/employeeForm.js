@@ -228,7 +228,7 @@ function phoneNumberValidate() {
 function graduateValidate() {
     var graduateId = document.getElementById("id10")
     if (!graduateValidation(graduation.value.trim())) {
-        onError(graduation, "Highest graduation not selected.", graduateId);
+        onError(graduation, "Education qualification must be selected.", graduateId);
     }
     else {
         onSuccess(graduation, graduateId);
