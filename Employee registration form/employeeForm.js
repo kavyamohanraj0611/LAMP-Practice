@@ -1,17 +1,73 @@
 const steps = Array.from(document.querySelectorAll(".employeeForm .details"));
 const nextBtn = document.querySelectorAll(".employeeForm .btn-nxt");
 const prevBtn = document.querySelectorAll(".employeeForm .btn-prev");
+const tabBtn = document.querySelectorAll(".employeeForm .btn-nxt1");
 
 nextBtn.forEach(button => {
     button.addEventListener('click', () => {
         changeStep('next');
     })
 })
+
 prevBtn.forEach(button => {
     button.addEventListener('click', () => {
         changeStep('prev');
     })
 })
+function jumpTab(stepNumber)
+{
+      index=stepNumber-1;
+      tabStep(index);
+}
+
+function tabStep(tabIndex)
+{
+    const active = document.querySelector('.active');
+    index = steps.indexOf(active);
+    if(tabIndex<index){  
+        steps[index].classList.remove('active')
+
+    }
+    else{
+        if (index == 0) {
+            if (emailIdValidate() == true && passwordValidate() == true && confirmPasswordValidate() == true && firstNameValidate() == true) {
+                steps[index].classList.remove('active')
+            }
+            else {
+                tabIndex = 0;
+            }
+
+        }
+        else if (index == 1) {
+            if (dateValidate() === true && genderValidate() == true && stateValidate() == true && phoneNumberValidate() == true) {
+                steps[index].classList.remove('active')
+            }
+            else {
+                tabIndex = 1;
+            }
+        }
+        else if (index == 2) {
+            if(tabIndex<=index+1){
+                steps[index].classList.remove('active')
+            }
+            else{
+                tabIndex=2;
+            }
+        }
+        else if (index == 3) {
+            if (graduateValidate() == true && yearOfPassValidate() == true) {
+                steps[index].classList.remove('active')
+            }
+            else {
+                tabIndex = 3;
+            }
+        }
+        else if (index == 4) {
+            steps[index].classList.remove('active')
+        }
+    }
+    steps[tabIndex].classList.add('active')
+}
 
 function changeStep(btn) {
     let index = 0;
@@ -56,7 +112,6 @@ function changeStep(btn) {
         index--;
     }
     steps[index].classList.add('active')
-
 }
 
 function emailIdValidate() {
@@ -125,9 +180,6 @@ function dateValidate() {
     if (dob.value.trim() === "") {
         onError(dob, "Enter your date of birth.", dateId);
     }
-    else if (!dateValidation(dob.value.trim())) {
-        onError(dob, "Enter valid date and age should be greater than 20.", dateId);
-    }
     else {
         onSuccess(dob, dateId);
         return true;
@@ -137,7 +189,7 @@ function dateValidate() {
 
 function genderValidate() {
     var genderId = document.getElementById("id7");
-    if (genderMale.checked === false && genderFemale.checked === false) {
+    if (genderMale.checked === false && genderFemale.checked === false && genderOther.checked===false) {
         onError(genderFemale, "Gender must be selected.", genderId);
     }
     else {
@@ -229,6 +281,7 @@ let lastName = document.getElementById("lastname");
 let dob = document.getElementById("dob");
 let genderMale = document.getElementById("male");
 let genderFemale = document.getElementById("female");
+let genderOther=document.getElementById("others");
 let state = document.getElementById("state");
 let mobile = document.getElementById("mobile");
 let graduation = document.getElementById("education");
@@ -240,10 +293,10 @@ emailId.addEventListener('blur', emailIdValidate)
 password.addEventListener('blur', passwordValidate);
 confirmPassword.addEventListener('blur', confirmPasswordValidate)
 firstName.addEventListener('blur', firstNameValidate);
-lastName.addEventListener('blur', lastNameValidate);
 dob.addEventListener('blur', dateValidate);
 genderMale.addEventListener('blur', genderValidate);
 genderFemale.addEventListener('blur', genderValidate);
+genderOther.addEventListener('blur',genderValidate);
 state.addEventListener('blur', stateValidate);
 mobile.addEventListener('blur', phoneNumberValidate);
 graduation.addEventListener('blur', graduateValidate);
@@ -291,25 +344,14 @@ function nameValidation(name) {
     }
 }
 
-function dateValidation(dob) {
-    var age = Math.floor((new Date().getFullYear() - new Date(dob).getFullYear()));
-    var month=new Date(dob).getMonth();
-    var date=new Date(dob).getDate();
-    if (age < 21) {
-        return false;
-    }
-    else if(isNaN(month))
-    {
-        return false;
-    }
-    else if(isNaN(date))
-    {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
+// function dateValidation(dob) {
+//     if (dob.value.trim() === undefined) {
+//         return false;
+//     }
+//     else {
+//         return true;
+//     }
+// }
 
 function stateValidation(state) {
     if (state === "") {
