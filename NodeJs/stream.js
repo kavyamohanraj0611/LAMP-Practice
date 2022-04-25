@@ -1,12 +1,20 @@
+const fs = require('fs')
+var readStream = fs.createReadStream('./largeFile.txt','utf8')
+var writeStream = fs.createWriteStream('./newFile.txt')
+readStream.on('data',(chunk)=>{ 
+    console.log("chunk received")
+    writeStream.write(chunk)
+})
+
 // Readable stream 
 
-const { Readable } = require('stream'); 
-const inStream = new Readable({
-  read() {}
-});
-inStream.push('ABCDEFGHIJKLM');
-inStream.push('NOPQRSTUVWXYZ');
-inStream.pipe(process.stdout);
+// const { Readable } = require('stream'); 
+// const inStream = new Readable({
+//   read() {}
+// });
+// inStream.push('ABCDEFGHIJKLM');
+// inStream.push('NOPQRSTUVWXYZ');
+// inStream.pipe(process.stdout);
 
 
 
@@ -22,9 +30,3 @@ inStream.pipe(process.stdout);
 //     callback(null, chunk);
 //   }
 // });
-
-// fs.createReadStream(file)
-//   .pipe(zlib.createGzip())
-//   .pipe(reportProgress)
-//   .pipe(fs.createWriteStream(file + '.zz'))
-//   .on('finish', () => console.log('Done'));
