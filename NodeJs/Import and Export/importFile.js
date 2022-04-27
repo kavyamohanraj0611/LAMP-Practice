@@ -1,0 +1,5 @@
+const access=require("./exportFile")
+console.log(access)
+console.log(access.name)
+console.log(access.id)
+console.log(access.message())
