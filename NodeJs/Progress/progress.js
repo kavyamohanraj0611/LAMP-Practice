@@ -7,7 +7,7 @@ const time1 = setInterval( () => {
   }
 }, 10);
 
-const data2 = new progress('Processing [:bar] :percent :etas ', { total: 100 });
+const data2 = new progress('Processing [:bar] :percent :etas ', { total: 100 });             //etas-elapse time as seconds
 const time2 = setInterval( () => {
   data2.tick();
   if (data2.complete) {
