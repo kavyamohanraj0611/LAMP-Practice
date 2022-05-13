@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DOM - Accessing Sibling nodes</h1>
+<h3 id="parent">
+<p id="one">Hello</p>
+<p id="two">Hi</p>
+<p>Welcome</p>
+</h3>
+<p id="first">p4</p>
+
+<script>
+var child=document.getElementById("two")
+var sibling1=child.previousElementSibling;
+sibling1.style.color="blue";
+var sibling2=child.nextElementSibling;
+sibling2.style.color="red";
+sibling2.style.fontSize="40px";
+</script>
+
+</body>
+</html>

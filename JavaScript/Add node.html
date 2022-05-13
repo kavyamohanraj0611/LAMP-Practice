@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="text-align: center;">DOM Add new node</h1>
+
+<div id="parent">
+<p id="one">This is First child</p>
+<p id="two">This is Child node</p>
+<p id="three">This is Last child</p>
+</div>
+
+<script>
+const newElement = document.createElement("p");
+const newNode = document.createTextNode("This id newly added node");
+newElement.appendChild(newNode);
+const element = document.getElementById("parent");
+element.appendChild(newElement);
+</script>
+
+</body>
+</html>

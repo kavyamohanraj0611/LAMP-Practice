@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="text-align: center;">DOM - Changing the style of child nodes</h1>
+<h3 id="parent">
+<p>This is first child</p>
+<p>This is child node</p>
+<p>This is last child </p>
+</h3>
+
+<script>
+var parent=document.getElementById("parent")
+var child1=parent.firstElementChild;
+child1.style.color="blue";
+child1.style.backgroundColor="yellow";
+
+var child2=parent.childNodes[3];
+child2.style.color="green";
+child2.style.textAlign="center";
+
+var child3=parent.lastElementChild;
+child3.style.color="red";
+child3.style.fontSize="40px";
+
+</script>
+
+</body>
+</html>
