@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1> Device orientation </h1>
+</head>
+
+<body>
+<h2 id="one"></h2>
+</body>
+
+<script>
+    function getOrientation() {
+        var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+        return  document.getElementById("one").innerHTML=orientation;
+    }
+
+    window.onresize = function () {
+         getOrientation(); 
+    }
+</script>
+
+</html>
