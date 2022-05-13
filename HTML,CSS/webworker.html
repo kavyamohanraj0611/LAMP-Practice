@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Worker</title>
+</head>
+<body>
+    <button onclick="alertTask()">Alert Task</button>
+    <button onclick="iterationButton()">Iteration Button</button>
+</body>
+<script>
+    function alertTask(){
+        alert("Alert Message");
+    }
+    function iterationButton(){
+        let worker=new Worker('worker.js');
+    }
+</script>
+</html>
